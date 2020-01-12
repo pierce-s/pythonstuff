@@ -1,2 +1,2 @@
 # pythonstuff
-Basic coding projects
+Basic coding projects by Pierce
