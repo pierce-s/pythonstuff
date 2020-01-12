@@ -11,9 +11,15 @@ target_met="no"
 
 generation= 1
 
+'''
+force an even number since mating uses half of the genes from each parent
+'''
 if (number_of_genes % 2) != 0:
     number_of_genes+=1
-    
+
+'''
+creates a target data set
+'''
 data=[]
 for i in range(number_of_genes):
     data.append(random.randrange(1,gene_range))
