@@ -2,7 +2,23 @@ import random
 import math
 from copy import deepcopy as copy
 
-
+'''Instructions:
+   Each generation aims to have a set of numbers equal to a target sum
+   ex. if the target sum is 9 and there are 3 numbers in each set, then [3,5,1] would be a solution
+   Target is chosen randomly among all possible numbers the set can create
+   
+   commands:
+   'gen(x,1)' will produce another generation of offpsring
+   'gen(x,10)' would produce 10 etc.
+   'display_dna(x)' displays all the offspring in the current generation
+   'display_fit(x)' displays the fitness of the current generation
+   'display_sum(x)' displays the sum of the current generation
+   'history(n,m) displays the mth offspring from the nth generation
+   
+   the simulation ends automatically when the sum of a set equals the target sum'''
+   
+   
+   
 # initialize variables
 
 genome_size=5
@@ -13,6 +29,7 @@ mutation_count=0
 current_generation=0
 gen_history=[]
 fitx=200
+
 # select a target sum, but only if it is possible to create with dna range/genome size
 target = random.randrange(0,dna_range*genome_size)
 
